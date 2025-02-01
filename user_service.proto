@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "github.com/Aakashc137/gomsa-proto/user;user";
+
+import "user.proto";
+
+// UserService defines the user management RPC methods.
+service UserService {
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
+  rpc GetUser(GetUserRequest) returns (GetUserResponse);
+  rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse);
+  rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse);
+}
